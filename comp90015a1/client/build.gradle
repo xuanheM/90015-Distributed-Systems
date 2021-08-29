@@ -6,18 +6,18 @@ plugins {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'com.alibaba:fastjson:1.1.54.android'
     implementation project(':base')
 }
 
 version '0.0.1'
-sourceCompatibility = 11.1
 
 repositories {
     mavenCentral()
 }
 
 application {
-    mainClass = 'com.kvoli.Client'
+    mainClass = 'com.assignment1.Client'
 }
 
 test {
@@ -26,7 +26,7 @@ test {
 
 task uberJar(type: Jar) {
     manifest {
-        attributes 'Main-Class': 'com.kvoli.Client'
+        attributes 'Main-Class': 'com.assignment1.Client'
     }
     archiveClassifier = 'uber'
 
